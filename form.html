@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        fieldset{
+            width: 60vw;
+            margin-top: 20px;
+            border: 3px solid chocolate;
+            background-color: aqua;
+        }
+        input{
+            padding: 5px;
+        }
+    </style>
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="">First Name</label>
+                <input type="text">
+                <label for="lastname">Last Name</label>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="phonenum">Phone Num</label>
+                <input type="text">
+                <label for="address">Address</label>
+                <input type="text">
+            </fieldset>
+            
+            
+            <div style="border: 2px solid red; margin-top: 4px; margin-left: 50px; margin-right: 50px; padding-left: 30px; padding-right: 30px;">
+                <h1 style="text-align: center;">Sign Up</h1>
+                <div>
+                    <label for="">First Name:</label><br>
+                    <input type="text" placeholder="Input your first name">
+                </div>
+                <div>
+                    <label for="">Last Name:</label><br>
+                    <input type="text" placeholder="Input your last name">
+                </div>
+                <div>
+                    <label for="">Email</label><br>
+                    <input type="email" placeholder="Input your email">
+                </div>
+                <div>
+                    <label for="">Phone Number</label><br>
+                    <input type="number" placeholder="Input your phone number">
+                </div>
+                <div>
+                    <label for="">Password</label><br>
+                    <input type="password" placeholder="Input your password">
+                </div>
+                <button>submit</button>
+            </div>
+        </form>
+    </body>
+</html>

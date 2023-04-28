@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>                  
+        </head>
+        <style>
+            body{
+                background-color: rgb(211, 209, 209); 
+                margin-left: 178px; 
+                margin-right: 178px; 
+                text-align: justify;                
+                font-family:Arial Narrow;                
+            }
+
+            table{
+                font-family: unset; 
+                font-size: 110%;
+            }
+
+            div{
+                border: none; 
+                background-color: rgb(191, 207, 223); 
+                padding-left: 15px; 
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            #New-p{
+                text-align: center; 
+                font-size: 60%;
+            }
+            
+            #New-one{
+                text-align: center; 
+                font-size: 90%;
+            }
+
+            #New-two{
+                text-align: center; 
+                font-size: 80%;
+            }
+
+            #new-tw{
+                color: black            
+        
+            }            
+            
+            a{
+                text-decoration: none;
+            }
+
+            button{
+                border: none;
+                background-color: rgb(253, 253, 255);
+                border-radius: 10%;
+                padding-top: 1.5px;
+                padding-bottom: 1.5px;
+            }
+        </style>
+        
+        <h2>
+            <table>                
+                <tr>
+                    <th><img src="https:edu.sqi.ng/wp-content/uploads/2019/01/co.jpg" width="20px"><a href="">Home</a></th>
+                    <th></th> <th id="new-tw">|</th>
+                    <th><a href="">Getting Started</a></th>
+                    <th></th> <th id="new-tw">|</th>
+                    <th><a href="">Download</a></th>
+                    <th></th> <th id="new-tw">|</th>
+                    <th><a href="">Documentation</a></th>
+                    <th></th> <th id="new-tw">|</th>
+                    <th><a href="">Browse Packages</a></th>
+                </tr>
+            </table>
+        </h2> <br>
+
+        <body>  
+                 
+            <ol>
+                <li><a href="">Dependency management</a></li><br>
+                <li><a href="">System Requirements</a></li><br>
+                <li><a href="">Installation Linux/Unix/macOS</a></li><br>                
+                <ol>
+                    <li><a href="">Downloading the Composer Executable</a></li><br>
+                    <ol>
+                        <li><a href="">Locally</a></li><br>
+                        <li><a href="">Globally</a></li><br>
+                    </ol>
+                </ol>
+                <li><a href="">Installation - Windows</a></li><br>
+                <ol>
+                    <li><a href="">Using the Installer</a></li><br>
+                    <li><a href="">Manual Installation</a></li><br>
+                </ol>
+                <li><a href="">Docker image</a></li><br>
+                <li><a href="">Using Composer</a></li>
+            </ol>        
+            <h1>Introduction</h1>
+            Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.  
+
+            <h2>Dependency management</h2>
+            Composer is <b>not</b> a package manager in the same sense as Yum or Apt are.  Yes, it deals with "packages" or libraries, but it manages them on a per-project basis, installing them in a directory (e.g.<button>vendor</button>) inside your project.  By default, it does not install anythin globally.  <br>
+            Thus, it is a dependency manager.  it does however support a "global" project for convenience via the <a href="">global</a> command.<br> <br>
+
+            This idea is not new and Composer is strongly inspired by node's <a href="">npm</a> and ruby's <a href="">bundler.</a><br> <br>
+
+            <dl>Suppose:</dl>
+            <ol>
+                <li>You have a project that depends on a number of libraries.</li>
+                <li>Some of those libraries depend on other libraries.</li>
+            </ol>
+            <dl>Composer:</dl>
+            <ol>
+                <li>Enables you to declare the libraries you depend on.</li>
+                <li>Finds out which versions of which packages can and need to be installed, and installs them (meaning it downloads them into your project.).</li>
+                <li>You can update all your dependencies in one command.</li>
+            </ol>
+            See the <a href="">Basic usage</a> chapter for more declaring dependencies.
+            <h2>System Requirements</h2>
+            Composer in its latest version requires PHP 7.2.5 to run.  A long-term support version (2.2x) still offers support for PHP 5.3.2+ in case you are stuck with a legacy PHP version.  A few sensitive php settings and compile flags are also reqired, but wen using the installer you wll be wamed about any incompatibilities.<br> <br>
+
+            To install packages from sources instead of plain zip archives, you will need git, svn, fossil or hg depending on how the package is version-controlled.<br> <br>
+
+            Composer is multi-platform and we strive to make it run equally well on Windows, Linux and macOS.
+            <h2>Installation - Linux / Unix / macOS</h2>
+            <h3>Downloadng the Composer Executable</h3>
+            Composer offers a convenient installer that you can execute directly from the command line.  Feel free to <a href="">download this file</a> or review it on <a href="">GitHub</a> if you wish to know more about the inner workings of tte installer.  The source is plain PHP. <br> <br>
+
+            There are, in short, two ways to install Composer.  Locally as part of your project, or globally as a system wide executable.
+            <h3>Locally</h3>
+            To install Composer locally, run the nstaller in your project directory.  See <a href="">the Download page</a> for instructions. <br> <br>
+
+            The installer will check a few PHP settings and then download <button>composer.phar</button> to your working drectory. This file is the Composer binary.  It is a PHAR (PHP archive), which is an archive format for PHP which can be run on te command line, amongst other things. <br> <br>
+
+            Now run <button>php composer.phar</button> in order to run Composer. <br> <br>
+
+            You can install Composer to a specific directory by using the <button>--install-dir</button> option and additionally (re)name it as well using the <button>--filename</button> option.  When running the nstaller wen following <a href="">the Download page instructions</a> add the following parameters: <br> <br>
+
+            php composer-setup.php --install-dir=bin --filename=composer <br> <br>
+
+            Now run <button>php bin/composer</button> in order to run Composer.
+            colum
+            <h3>Globally</h3>
+            You can place the Composer PHAR anywhere you wish.  If you put it in a directory that is part of your <button>PATH,</button> you can access it globally.  On Unix systems you can ever make it executale and invoke it without directly using the <button>php</button> interpreter. <br> <br>
+
+            After running the installer following <a href="">the Download page instructions</a> you can run this to move composer.phar to a directory that is in your path:
+            <p>mv composer.phar  /usr/local/bin/composer</p>
+            If you like to install it only for your user and avoid requiring root permissions, you can use <button>~/.local.bin</button> instead which is available by default on some Linux distributions. <br> <br>
+
+            <div>
+                <b>Note:</b> If the above fails due to permissions, you may need to run it again with <button>sudo</button> <br><br>
+
+                <b>Note:</b> On some versions of macOS the <button>/usr</button> directory does not exist by default.  If you receive the error "/usr/local/bin/composer: No such file or directory" then you must create the directory manually before proceeding: <button>mkdir -p /usr/local/bin</button>. <br><br>
+
+                <b>Note:</b> For information on changing your PATH, please read the <a href=""><b>       Wikipedia article</b></a>
+            </div> <br> <br>
+
+            Now run <button>composer</button> in order to run Composer instead of <button>php composer.phar</button>
+            <h2>Installation-Windows</h2>
+            <h3>Using the Installer</h3>
+            This is the easiest way to get Composer set up on your machine. <br> <br>
+
+            Download and run <a href="">Composer-Setup.exe.</a> It will install the latest Composer version and set up your PATH so that you can call <button>composer</button> from any directory in your command line. <br><br>
+
+            <div>
+                <b>Note:</b> Close your current terminal. Test usage with a new terminal.  This is important since te PATH only gets loaded when the terminal starts.         
+            </div> <br>
+
+            <h3>Manual Installation</h3>
+            change to a directory on your <button>PATH</button> and run installer following <a href="">the Download page instructions</a> to download <button>composer.phar</button> <br> <br>
+            
+            Create a new <button>composer.bat</button> file alongside <button>composer.phar</button> <br> <br>
+            
+            Using cmd.exe: <br> <br>
+
+            <div>
+                C:\bin> echo @php "%~dp0composer.phar" %*>composer.bat         
+            </div> <br>
+
+            Using PowerShell: <br> <br>
+
+            <div>
+                PS C:\bin> Set-Content.bat '@php "%~dp0composer.phar" %*'        
+            </div> <br>
+            
+            Add the director to your PATH environment variable if it isn't already.  For information on changing your PATH variable, please see <a href="">this article</a> and/or use your search engine of choice. <br> <br>
+
+            Close your current terminal.  Test usage with a new terminal: <br> <br>
+            Using cmd.exe: <br> <br>
+
+            <div>
+                C:\Users\>composer- V        
+            </div> <br>
+            Using cmd.exe: <br> <br>
+
+            <div>
+                Composer version 2.4.0 2022-08-16 16:10:48
+            </div>
+
+            <h2>Docker Image</h2>
+            Composer is publised as Docker container in a few places, see the list in the <a href="">composer/docker README:</a> <br> <br>
+
+            Example usage:
+            Using cmd.exe: <br> <br>
+
+            <div>
+                docker pull composer/composer <br>
+                docker run --rm -it -v "$(pwd) :/app" composer install
+            </div> <br>
+
+            To add Composer to an existing <b>Dockerfile</b> you can simply copy binary file from pre-built, low-size images: <br> <br>
+
+            <div>
+                # Latest release <br>
+                COPY --from=composer: latest-bin /composer  /usr/bin/composer <br> <br>
+                # Specific <br>
+                COPY --from=composer/composer:2-bin /composer /usr/bin/composer
+            </div> <br>           
+
+            Read the <a href="">image description</a> for further usage information. <br> <br>
+
+            <b>Note:</b> Docker specific issues should be filled <a href="">on the composer/docker repository.</a> <br> <br>
+
+            <b>Note:</b> You may also use <button>composer</button> instead of <button>composer/composer</button> as image name above. It is shorter and is a Dockerofficial image but is not published directly by us and thus usually receives new releases with a delay of a few days.  <b>Important:</b> short-aliased images don't have binary-only equivalents, so for <button>COPY --from</button> approach it's better to use <button>composer/composer</button> ones. <br> <br>
+
+            <h2>Using Composer</h2>
+            Now that you've installed Composer, you are ready to use it! Head on over to the next chapter for a short demonstration. <br> <br> <br>
+
+            <p id="New-two"><a href="">Basic usage</a></p> <br><br>
+
+            <p id="New-one"> <img src="https:edu.sqi.ng/wp-content/uploads/2019/01/co.jpg" width="20px"> Found a typo? Something is wrong in this documentation? <a href="">Fork and edit</a> it!</p> <br><br>
+
+            <p id="New-p">Composer and all content on this site are released under the <a href="">MIT license</a></p>
+        </body>
+</html>
